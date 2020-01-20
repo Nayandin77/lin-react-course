@@ -1,3 +1,6 @@
+# lin-react-course
+App created from LinkedIn Learning Course: React.js Essential Training
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
