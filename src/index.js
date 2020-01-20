@@ -36,6 +36,14 @@ class Library extends React.Component {
         freeBookmark: true,
         hiring: true
     }
+
+    componentDidMount() {
+        console.log("Mounted")
+    }
+
+    componentDidUpdate() {
+        console.log("updated")
+    }
     
     toggleOpenClosed = () => {
         this.setState(prevState => ({
