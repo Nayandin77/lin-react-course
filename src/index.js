@@ -8,19 +8,23 @@ let bookList = [
 
 ]
 
-const Book = ({title, author, pages}) => {
+const Book = ({title, author, pages, freeBookmark}) => {
     return (
         <section>
             <h2>{title}</h2>
             <p>by: {author}</p>
             <p>Pages: {pages} page</p>
+            <p>Free Bookmark Today: {freeBookmark ? 'yes!': 'no!'}</p>
         </section>
     )
 }
 
 class Library extends React.Component {
 
-    state = { open: false }
+    state = { 
+        open: false ,
+        freeBookmark: true
+    }
     
     toggleOpenClosed = () => {
         this.setState(prevState => ({
@@ -40,7 +44,8 @@ class Library extends React.Component {
                             key={i}
                             title={book.title} 
                             author={book.author} 
-                            pages={book.pages} />
+                            pages={book.pages}
+                            freeBookmark={this.state.freeBookmark} />
     
                 )}
             </div>
