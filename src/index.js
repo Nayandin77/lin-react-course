@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { render } from 'react-dom'
 
 let bookList = [
@@ -66,10 +66,10 @@ class Library extends React.Component {
                     : <div>
                         {this.state.data.map(product => {
                             return (
-                                <div>
+                                <div key={product.id}>
                                     <h3>Library Product of the Week!</h3>
                                     <h4>{product.name}</h4>
-                                    <img src={product.image} height={100} />
+                                    <img alt={product.name} src={product.image} height={100} />
                                 </div>
                             )
                         })}
